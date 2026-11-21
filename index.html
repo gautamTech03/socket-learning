@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SocketChat</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <header class="chat-header">
+            <div class="logo">S</div>
+
+            <div>
+                <h1>SocketChat</h1>
+                <p>Real-time private messaging</p>
+            </div>
+        </header>
+
+        <main class="chat-content">
+
+            <section class="register-section">
+
+                <h2>Welcome to SocketChat</h2>
+
+                <p class="subtitle">
+                    Connect with your friends instantly.
+                </p>
+
+                <div class="input-group">
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter your username"
+                    >
+
+                    <button
+                        onclick="registerUser()"
+                        class="primary-btn"
+                    >
+                        Register
+                    </button>
+
+                </div>
+
+                <p id="status" class="status">
+                    ● Not connected
+                </p>
+
+            </section>
+
+            <div class="divider"></div>
+
+            <section class="message-section">
+
+                <h2>Private Chat</h2>
+
+                <div class="input-group">
+
+                    <input
+                        type="text"
+                        id="recipient"
+                        placeholder="Recipient username"
+                    >
+
+                </div>
+
+                <div class="message-input">
+
+                    <input
+                        type="text"
+                        id="message"
+                        placeholder="Write your message..."
+                        onkeydown="if(event.key === 'Enter') sendMessage()"
+                    >
+
+                    <button
+                        onclick="sendMessage()"
+                        class="send-btn"
+                    >
+                        Send
+                    </button>
+
+                </div>
+
+                <div class="messages-container">
+
+                    <h3>Messages</h3>
+
+                    <ul id="messages" class="messages-list"></ul>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>SocketChat © 2026 | Built with Socket.IO</p>
+        </footer>
+
+    </div>
+
+    <!-- Load Socket.IO client first -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- Then load our JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

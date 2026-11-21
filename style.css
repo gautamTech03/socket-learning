@@ -1,0 +1,285 @@
+
+/* =================================
+   1. GLOBAL STYLING
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    color: #1e293b;
+}
+
+/* =================================
+   2. MAIN CONTAINER
+================================= */
+
+.chat-container {
+    width: 100%;
+    max-width: 650px;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* =================================
+   3. HEADER
+================================= */
+
+.chat-header {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: white;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: #4f46e5;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.chat-header h1 {
+    font-size: 23px;
+    margin-bottom: 4px;
+}
+
+.chat-header p {
+    font-size: 13px;
+    color: #dbeafe;
+}
+
+/* =================================
+   4. MAIN CONTENT
+================================= */
+
+.chat-content {
+    padding: 30px;
+}
+
+.register-section h2,
+.message-section h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 22px;
+}
+
+/* =================================
+   5. INPUT FIELDS
+================================= */
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #dbe2ea;
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+    background: #f8fafc;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #4f46e5;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+/* =================================
+   6. BUTTONS
+================================= */
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    padding: 13px 22px;
+    background: #4f46e5;
+    color: white;
+    white-space: nowrap;
+}
+
+.primary-btn:hover {
+    background: #3730a3;
+    transform: translateY(-2px);
+}
+
+.send-btn {
+    padding: 0 25px;
+    background: #2563eb;
+    color: white;
+}
+
+.send-btn:hover {
+    background: #1d4ed8;
+}
+
+/* =================================
+   7. USER STATUS
+================================= */
+
+.status {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #f1f5f9;
+    color: #64748b;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* =================================
+   8. DIVIDER
+================================= */
+
+.divider {
+    height: 1px;
+    background: #e2e8f0;
+    margin: 28px 0;
+}
+
+/* =================================
+   9. MESSAGE SECTION
+================================= */
+
+.message-section h2 {
+    margin-bottom: 20px;
+}
+
+.message-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.message-input input {
+    flex: 1;
+    min-width: 0;
+}
+
+/* =================================
+   10. MESSAGES CONTAINER
+================================= */
+
+.messages-container {
+    margin-top: 28px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px;
+    min-height: 180px;
+}
+
+.messages-container h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.messages-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.messages-list li {
+    background: #e0e7ff;
+    color: #312e81;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* =================================
+   11. FOOTER
+================================= */
+
+footer {
+    text-align: center;
+    padding: 18px;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+footer p {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* =================================
+   12. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .chat-content {
+        padding: 20px;
+    }
+
+    .chat-header {
+        padding: 20px;
+    }
+
+    .chat-header h1 {
+        font-size: 20px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .primary-btn {
+        width: 100%;
+    }
+
+    .send-btn {
+        padding: 0 16px;
+    }
+
+}
